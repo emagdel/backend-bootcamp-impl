@@ -20,13 +20,10 @@ object Monad01FromCollections extends App {
 
 
     val mapToValue = (input : Boolean) => Option(input)
-      .flatMap { input => 
-        /* TODO Can this be shortened? */
-       input match {
+      .flatMap { 
          case true => Option("valid value")
          case false => None
        }
-      }
 
       List(true, false).foreach(
         mapToValue(_).foreach(println)

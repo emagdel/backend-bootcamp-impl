@@ -1,8 +1,9 @@
 
 object FunctionsAndLoops extends App {
 
+  val wrapCharAZ = (int : Int) => int 
+
   def encode(str : String) : String = {
-    val wrapCharAZ = (int : Int) => int 
     str
       .map(_.toUpper)
       .map(_ + 1 )
@@ -14,7 +15,6 @@ object FunctionsAndLoops extends App {
   println(encode("xx"))
 
   def decode(str : String) : String = {
-    val wrapCharAZ = (int : Int) => int 
     str
       .map(_.toLower)
       .map(_ - 1 )

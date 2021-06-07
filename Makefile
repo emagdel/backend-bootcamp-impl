@@ -3,10 +3,11 @@ all:
 	$(NOOP)
 
 %.class:
-	@scalac -deprecation $*.scala
+	@scalac -language:implicitConversions -feature -deprecation $*.scala
 
 %: %.class
 	@scala $@
 
 clean:
 	rm *.class
+
